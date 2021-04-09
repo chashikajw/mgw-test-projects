@@ -1,0 +1,41 @@
+openapi: 3.0.1
+info:
+  title: CJWAPI_V4
+  version: 1.0.0
+servers:
+  - url: /
+security:
+  - default: []
+paths:
+  /f6d88871-9ca6-4621-ae10-8d8bb94c9882:
+    get:
+      parameters: []
+      responses:
+        '200':
+          description: ok
+      security:
+        - default: []
+      x-auth-type: Application & Application User
+      x-throttling-tier: null
+      x-wso2-application-security:
+        security-types:
+          - oauth2
+        optional: false
+components:
+  securitySchemes:
+    default:
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: 'https://test.com'
+          scopes: {}
+
+x-wso2-production-endpoints:
+  urls:
+    - 'http://run.mocky.io/v3/'
+  type: http
+x-wso2-sandbox-endpoints:
+  urls:
+    - 'http://run.mocky.io/v3/'
+  type: http
+x-wso2-basePath: /bny/v4

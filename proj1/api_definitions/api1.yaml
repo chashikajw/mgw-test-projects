@@ -1,0 +1,82 @@
+openapi: 3.0.1
+info:
+  title: CJWAPI_V1
+  version: 1.0.0
+servers:
+  - url: /
+security:
+  - default: []
+paths:
+  /*:
+    get:
+      responses:
+        '200':
+          description: OK
+      security:
+        - default: []
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+      x-wso2-application-security:
+        security-types:
+          - oauth2
+        optional: false
+  /proj1:
+    get:
+      parameters: []
+      responses:
+        '200':
+          description: ok
+      security:
+        - default: []
+      x-auth-type: Application & Application User
+      x-throttling-tier: null
+      x-wso2-application-security:
+        security-types:
+          - oauth2
+        optional: false
+  /proj2:
+    get:
+      parameters: []
+      responses:
+        '200':
+          description: ok
+      security:
+        - default: []
+      x-auth-type: Application & Application User
+      x-throttling-tier: null
+      x-wso2-application-security:
+        security-types:
+          - oauth2
+        optional: false
+  /proj3:
+    get:
+      parameters: []
+      responses:
+        '200':
+          description: ok
+      security:
+        - default: []
+      x-auth-type: Application & Application User
+      x-throttling-tier: null
+      x-wso2-application-security:
+        security-types:
+          - oauth2
+        optional: false
+components:
+  securitySchemes:
+    default:
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: 'https://test.com'
+          scopes: {}
+
+x-wso2-production-endpoints:
+  urls:
+    - 'https://cjw-proj-apis.herokuapp.com/'
+  type: http
+x-wso2-sandbox-endpoints:
+  urls:
+    - 'https://cjw-proj-apis.herokuapp.com/'
+  type: http
+x-wso2-basePath: /bny/v1
